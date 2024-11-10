@@ -1,0 +1,73 @@
+@media screen and (max-width: 767.98px) {
+  /* Wrapper for positioning both buttons together */
+  .food-buttons-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px; /* Space between buttons */
+    z-index: 10;
+  }
+  .food-buttons-wrapper {
+    position: absolute;
+    top: 109%;
+    right: 10px;
+    transform: translateY(-109%);
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+    padding-top: -15px;
+    padding-bottom: 0px;
+  }
+
+  .custom-food-prev,
+  .custom-food-next {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #6a5af9;
+    color: white;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+
+  .custom-food-prev {
+    /* Arrow or position for left-facing button */
+    order: 1; /* Ensure this button appears first */
+  }
+
+  .custom-food-next {
+    /* Arrow or position for right-facing button */
+    right: 0;
+    order: 2; /* Ensure this button appears second */
+  }
+
+  /* Hide other unnecessary navigation buttons */
+  .custom-prev,
+  .custom-next,
+  .custom-testimonial-prev,
+  .custom-testimonial-next {
+    display: none;
+  }
+
+  .history {
+    padding: 40px 0;
+  }
+  .testimonial {
+    padding: 20px 0;
+  }
+
+  .bg-center h1 {
+    font-size: 32px;
+  }
+  .banner-item img {
+    height: 350px;
+  }
+  .history-title {
+    font-size: 24px;
+  }
+  .food-button {
+    position: absolute;
+    right: 20px;
+  }
+}

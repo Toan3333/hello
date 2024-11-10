@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
     <div class="show">
@@ -116,12 +117,14 @@
                 </div>
               </div>
             </div>
-            <button class="custom-food-prev">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            </button>
-            <button class="custom-food-next">
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </button>
+            <div class="food-buttons-wrapper">
+              <button class="custom-food-prev">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </button>
+              <button class="custom-food-next">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -264,8 +267,8 @@
       });
 
       const swiper2 = new Swiper(".swiper-history", {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 2,
+        spaceBetween: 20,
         loop: true,
         autoplay: {
           delay: 1000,
@@ -276,10 +279,24 @@
           nextEl: ".custom-next", // Link to custom next button
           prevEl: ".custom-prev", // Link to custom prev button
         },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
       });
 
       const swiper3 = new Swiper(".swiper-moment", {
-        slidesPerView: 8,
+        slidesPerView: 2,
         spaceBetween: 20,
 
         loop: true, // Loop through slides
@@ -292,10 +309,24 @@
           nextEl: ".custom-next", // Link to custom next button
           prevEl: ".custom-prev", // Link to custom prev button
         },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 8,
+            spaceBetween: 50,
+          },
+        },
       });
 
       const swiper4 = new Swiper(".swiper-food", {
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 20,
 
         speed: 500,
@@ -303,14 +334,41 @@
           nextEl: ".custom-food-next", // Link to custom next button
           prevEl: ".custom-food-prev", // Link to custom prev button
         },
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            speed: 3000,
+            autoplay: {
+              delay: 1000,
+              disableOnInteraction: false,
+            },
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
       });
 
       const swiper5 = new Swiper(".swiper-testimonial", {
         slidesPerView: 1,
         spaceBetween: 20,
-        speed: 500,
         pagination: {
           el: ".swiper-pagination",
+        },
+        speed: 3000,
+        autoplay: {
+          delay: 10000,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".custom-testimonial-next", // Link to custom next button
