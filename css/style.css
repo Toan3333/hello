@@ -1,0 +1,232 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.swiper-banner-container {
+  position: relative;
+}
+.bg-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.bg-center h1 {
+  font-size: 56px;
+  margin: 40px 0;
+  color: white;
+}
+.banner-item img {
+  width: 100%;
+  height: 900px;
+}
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #6a5af9;
+  color: white;
+  border-radius: 100rem;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.custom-prev {
+  left: 30px;
+}
+.custom-next {
+  right: 30px;
+}
+
+.custom-food-prev,
+.custom-food-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #6a5af9;
+  color: white;
+  border-radius: 100rem;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.custom-food-prev {
+  left: -70px;
+}
+.custom-food-next {
+  right: -70px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: red;
+}
+.swiper-pagination-bullet {
+  background-color: #6a5af9;
+}
+.show-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Di chuyển lên */
+  }
+}
+
+.heart {
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite; /* Áp dụng animation */
+}
+
+.heart:nth-child(1) {
+  animation-delay: 0s; /* Khoảng thời gian delay cho phần tử đầu tiên */
+}
+
+.heart:nth-child(2) {
+  animation-delay: 0.5s; /* Khoảng thời gian delay cho phần tử thứ hai */
+}
+
+.show-title {
+  cursor: pointer;
+  font-size: 20px;
+}
+.app {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  background-color: #111629;
+}
+.show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1d5d0;
+  padding: 10px 16px;
+  text-align: center;
+  z-index: 10;
+}
+.app.active {
+  opacity: 1;
+  visibility: visible;
+}
+.history {
+  padding: 50px 0;
+}
+.history-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.history-title {
+  text-align: center;
+  font-size: 46px;
+  color: white;
+  margin-bottom: 40px;
+}
+.moment-item img {
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.food-item img {
+  height: 280px;
+  width: 380px;
+  object-fit: cover;
+}
+.swiper-food-container {
+  position: relative;
+}
+.testimonial {
+  padding: 60px 0;
+}
+.testimonial-box {
+  background-color: #20293a;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+}
+.container-2 {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+.swiper-testimonial-container {
+  position: relative;
+}
+.custom-testimonial-prev,
+.custom-testimonial-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #6a5af9;
+  color: white;
+  border-radius: 100rem;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.custom-testimonial-prev {
+  left: -70px;
+}
+.custom-testimonial-next {
+  right: -70px;
+}
+.testimonial-content p {
+  font-size: 16px;
+  line-height: 24px;
+}
